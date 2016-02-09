@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Workshop</title>
+</head>
+<body>
+<h1>Unsere erste Java-Web-Anwendung</h1>
+
+
+<span>Hello, </span> <span th:text="${name}"/>
+<span> aus </span> <span th:text="${hometown}"/><span>!</span>
+
+
+<h2>Unsere Personen</h2>
+
+
+<table>
+    <tr>
+        <th>Vorname</th>
+        <th>Nachname</th>
+    </tr>
+    <tr th:each="person : ${personList}">
+        <td th:text="${person.firstName}"/>
+        <td th:text="${person.lastName}"/>
+    </tr>
+
+
+
+</table>
+
+
+</body>
+</html>
